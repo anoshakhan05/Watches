@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TIMELESS PRECISION | Luxury Horology</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f2cc0d",
+                "background-light": "#f8f8f5",
+                "background-dark": "#0a0a0a",
+                "surface-dark": "#1a1a1a",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"],
+                "serif": ["Playfair Display", "serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .glass-header {
+            background: rgba(10, 10, 10, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(242, 204, 13, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(242, 204, 13, 0.3);
+        }
+        .watch-shadow {
+            filter: drop-shadow(0 0 50px rgba(242, 204, 13, 0.15));
+        }
+        .smoke-overlay {
+            background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(10, 10, 10, 0.8) 100%);
+            pointer-events: none;
+        }
+        .rim-light {
+            background: radial-gradient(circle at 50% 50%, rgba(242, 204, 13, 0.05) 0%, transparent 70%);
+        }
+        @keyframes slow-float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        .animate-float {
+            animation: slow-float 8s ease-in-out infinite;
+        }
+        .trust-logo {
+            filter: grayscale(1) contrast(0.5) brightness(1.5);
+            opacity: 0.4;
+            transition: all 0.5s ease;
+        }
+        .trust-logo:hover {
+            filter: grayscale(0) contrast(1) brightness(1);
+            opacity: 0.8;
+        }
+        .blurred-movement-bg {
+            filter: blur(40px) brightness(0.3);
+            transform: scale(1.2);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-white selection:bg-primary selection:text-black overflow-x-hidden">
+<header class="fixed top-0 left-0 w-full z-50 px-8 py-6">
+<nav class="max-w-7xl mx-auto flex items-center justify-between glass-header px-8 py-4 rounded-xl border border-primary/10">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-serif tracking-widest text-primary font-bold" href="#">AETERNA</a>
+<div class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-medium text-white/70">
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<a class="hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="hover:text-primary transition-colors" href="#">Boutique</a>
+<a class="hover:text-primary transition-colors" href="#">Craftsmanship</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white/70 hover:text-primary transition-colors">
+<span class="material-icons text-xl">search</span>
+</button>
+<button class="text-white/70 hover:text-primary transition-colors relative">
+<span class="material-icons text-xl">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-[10px] text-black font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
+</button>
+<div class="h-4 w-[1px] bg-white/20 mx-2"></div>
+<a class="hidden lg:block text-[10px] uppercase tracking-[0.2em] font-bold border border-primary/30 hover:bg-primary hover:text-black transition-all px-4 py-2 rounded" href="#">
+                Book Appointment
+            </a>
+</div>
+</nav>
+</header>
+<section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-background-dark"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rim-light"></div>
+<div class="absolute inset-0 opacity-40 mix-blend-screen smoke-overlay"></div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden z-10">
+<h2 class="font-serif text-[12vw] leading-none text-white/[0.03] italic translate-y-[-10%] whitespace-nowrap">
+            HOROLOGICAL EXCELLENCE
+        </h2>
+</div>
+<div class="relative z-20 w-full max-w-4xl aspect-square flex items-center justify-center">
+<div class="relative z-20 animate-float watch-shadow">
+<img alt="Luxury skeleton watch" class="w-[450px] h-auto object-contain drop-shadow-[0_35px_35px_rgba(242,204,13,0.15)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDojfs4qyp5DxeFyojL5e4pQqukyF1HOLsDv_vWDUJUitQP_ujqpXa4bgiAPQKd_vKuwu1-aG-mKNZqCwMnN7wbS6J4kakyjwWrsLdn9qkOJg184ZlrQXOURAX2B9q36EqV7yS14QBi6tnqbPChoYuu-8g4pMm6u8UciUwAMcR3ba3lCyKPcSjaZ8ZBUp_BiZ1Q3qkxEG6XYtXIsz2E7CsRnxt-hhYdFLQEIgiCrqJsoE4lQN-cBr9pXqsa7XNDyvz2W4JeRBH9Q-vG"/>
+</div>
+<div class="absolute inset-0 z-30 flex flex-col items-center justify-center text-center">
+<h1 class="font-serif text-6xl md:text-8xl tracking-tight text-primary text-glow leading-none mb-4">
+                TIMELESS PRECISION
+            </h1>
+<p class="font-display text-lg md:text-2xl tracking-[0.5em] text-white/80 font-light uppercase">
+                REDEFINED
+            </p>
+<div class="mt-12">
+<button class="group relative px-10 py-4 overflow-hidden rounded-full border border-primary bg-transparent text-primary hover:text-black transition-colors duration-500">
+<span class="absolute inset-0 w-0 bg-primary transition-all duration-500 ease-out group-hover:w-full"></span>
+<span class="relative z-10 font-bold uppercase tracking-widest text-xs">Explore the Collection</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20">
+<span class="text-[10px] uppercase tracking-[0.3em] text-primary/60 font-medium">Scroll to Discover</span>
+<div class="w-[1px] h-16 bg-gradient-to-b from-primary/60 via-primary/20 to-transparent"></div>
+</div>
+</section>
+<section class="relative py-32 bg-background-dark overflow-hidden border-t border-white/5">
+<div class="absolute inset-0 z-0 flex items-center justify-center opacity-30">
+<img alt="Mechanical Watch Movement" class="w-full max-w-5xl blurred-movement-bg animate-pulse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDznmx4ZiKix4olWjyo-DsT3JGuwANsDz0hJcfC8595RY9tSJ3hgD2FnPg1m_d9E57R0odBhVGeP-oyZeUH2R6zFZG_0ujtttdLWuzBQkI-f5DPLsn0ly3gCc7MtPGDCCzUumHIi3YnvnCPll-brERPo0gRcvRzCUqGzl3Nrw__Iu7s2VR38c5vu1ZJV4e-Vdcz-B2pjlgE0CYgmjJP4JNowWOF-4SodphyP6gEHwK-nlB3v68qUBxcRCtxKUeqZ_bD3vcPrC1EgzPX" style="animation-duration: 10s;"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8">
+<div class="flex flex-wrap items-center justify-between gap-12 border-b border-white/10 pb-20 opacity-80">
+<div class="flex items-center gap-4 trust-logo">
+<span class="material-symbols-outlined text-4xl">verified</span>
+<div class="flex flex-col">
+<span class="text-[10px] tracking-[0.2em] uppercase font-bold">Swiss Watch</span>
+<span class="text-[8px] tracking-[0.1em] uppercase font-light">Federation Accredited</span>
+</div>
+</div>
+<div class="flex items-center gap-4 trust-logo">
+<span class="material-symbols-outlined text-4xl">diamond</span>
+<div class="flex flex-col">
+<span class="text-[10px] tracking-[0.2em] uppercase font-bold">GIA Certified</span>
+<span class="text-[8px] tracking-[0.1em] uppercase font-light">Gemstone Excellence</span>
+</div>
+</div>
+<div class="flex items-center gap-4 trust-logo">
+<span class="material-symbols-outlined text-4xl">workspace_premium</span>
+<div class="flex flex-col">
+<span class="text-[10px] tracking-[0.2em] uppercase font-bold">Grand Prix d'Horlogerie</span>
+<span class="text-[8px] tracking-[0.1em] uppercase font-light">Laureate 2023</span>
+</div>
+</div>
+<div class="flex items-center gap-4 trust-logo">
+<span class="material-symbols-outlined text-4xl">architecture</span>
+<div class="flex flex-col">
+<span class="text-[10px] tracking-[0.2em] uppercase font-bold">Haute Horlogerie</span>
+<span class="text-[8px] tracking-[0.1em] uppercase font-light">Foundation Partner</span>
+</div>
+</div>
+</div>
+<div class="pt-32 text-center max-w-4xl mx-auto">
+<h3 class="text-[10px] tracking-[0.4em] uppercase text-primary/60 font-medium mb-16">Voices of Excellence</h3>
+<div class="relative">
+<span class="absolute -top-12 -left-8 text-primary/10 text-9xl font-serif">“</span>
+<p class="font-serif text-3xl md:text-5xl italic text-primary/90 leading-tight mb-12">
+                    "The artisan's dedication to every microscopic gear is palpable. This isn't just a timepiece; it's the rhythm of a legacy worn on the wrist."
+                </p>
+<div class="flex flex-col items-center gap-2">
+<div class="h-[1px] w-12 bg-primary/40 mb-4"></div>
+<span class="text-sm tracking-[0.3em] font-light uppercase text-white/90">Julian Vance</span>
+<span class="text-[10px] tracking-[0.15em] text-white/40 uppercase">Senior Curator, Heritage Foundation</span>
+</div>
+</div>
+<div class="flex justify-center gap-8 mt-16">
+<button class="text-white/30 hover:text-primary transition-colors">
+<span class="material-icons">west</span>
+</button>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+</div>
+<button class="text-white/30 hover:text-primary transition-colors">
+<span class="material-icons">east</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<div class="fixed right-12 top-1/2 -translate-y-1/2 flex flex-col gap-6 items-center z-50">
+<div class="group cursor-pointer flex items-center gap-4">
+<span class="text-[10px] text-primary opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Experience</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary ring-4 ring-primary/20"></div>
+</div>
+<div class="group cursor-pointer flex items-center gap-4">
+<span class="text-[10px] text-white/40 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Heritage</span>
+<div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+</div>
+<div class="group cursor-pointer flex items-center gap-4">
+<span class="text-[10px] text-white/40 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Testimonials</span>
+<div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+</div>
+</div>
+<div class="fixed inset-0 pointer-events-none z-40 border-[40px] border-black/10 shadow-[inset_0_0_150px_rgba(0,0,0,0.9)]"></div>
+
+</body></html>

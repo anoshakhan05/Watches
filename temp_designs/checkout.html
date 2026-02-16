@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Premium Minimalist Checkout | Chronos Luxe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f4c025",
+                "background-light": "#f8f8f5",
+                "background-dark": "#1a170e",
+                "neutral-dark": "#2a261a",
+                "neutral-muted": "#4a4433",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-panel {
+            background: rgba(34, 30, 16, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 192, 37, 0.1);
+        }
+        .input-focus-gold:focus-within label {
+            color: #f4c025;
+            transform: translateY(-1.5rem) scale(0.85);
+        }
+        .input-underline {
+            border-bottom-width: 1px;
+            border-color: rgba(244, 192, 37, 0.2);
+        }
+        .input-underline:focus {
+            border-color: #f4c025;
+            outline: none;
+            box-shadow: 0 1px 0 0 #f4c025;
+        }
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        .shimmer-btn:hover::after {
+            left: 120%;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-display">
+<!-- Header / Navigation -->
+<header class="w-full py-8 px-6 md:px-12 flex justify-between items-center z-10">
+<div class="flex items-center gap-2">
+<span class="text-primary material-icons text-3xl">hourglass_empty</span>
+<span class="text-xl font-bold tracking-widest uppercase">Chronos</span>
+</div>
+<a class="text-xs uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-icons text-sm">arrow_back</span>
+            Back to Shop
+        </a>
+</header>
+<!-- Main Checkout Container -->
+<main class="flex-grow flex flex-col items-center justify-start px-6 pb-20 max-w-7xl mx-auto w-full">
+<!-- Progress Stepper -->
+<div class="w-full max-w-3xl mb-16">
+<div class="flex justify-between items-center relative">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-primary/20 -z-0"></div>
+<div class="z-10 bg-background-dark px-4 flex flex-col items-center group">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center mb-2 group-hover:border-primary transition-colors">
+<span class="material-icons text-sm text-primary">check</span>
+</div>
+<span class="text-[10px] uppercase tracking-tighter text-stone-500">Shipping</span>
+</div>
+<div class="z-10 bg-background-dark px-4 flex flex-col items-center group">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-2 shadow-lg shadow-primary/20">
+<span class="text-xs font-bold text-background-dark">02</span>
+</div>
+<span class="text-[10px] uppercase tracking-tighter text-primary font-bold">Payment</span>
+</div>
+<div class="z-10 bg-background-dark px-4 flex flex-col items-center group opacity-40">
+<div class="w-8 h-8 rounded-full border border-stone-600 flex items-center justify-center mb-2">
+<span class="text-xs font-bold">03</span>
+</div>
+<span class="text-[10px] uppercase tracking-tighter text-stone-500">Review</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 w-full items-start">
+<!-- Left Side: Order Summary -->
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="glass-panel rounded-xl p-8 space-y-8 sticky top-8">
+<h2 class="text-lg font-light tracking-widest uppercase border-b border-primary/10 pb-4">Order Summary</h2>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-neutral-dark rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Luxury minimalist gold watch close up shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiuKXKTt5RbrfLlO6FaYnxYiU5dXLVNKhxgSjU_rUZTXRHEjNpJvn90gZ3pMrDdj3T7t_4fA7D42PDhYEWzovdBjyEbmKWwwwI3uazjv3ncyhfzC2Jcs8wVkiBm_2a_2GIKfuqLjjiUDcWA_j8AT_1wiCqD40zn9mPmWawaUK9RL0c5SKt7aQlhTtGvgWG5eaIbM9E_ICyQsHakvcIL9Q3fTCneJP_rxGjvPiK0CgnwJAj6ihjPoKf-ExJ4s901ZPeTLSTfesIndUs"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<h3 class="text-sm font-medium tracking-wide">Aurelius Chronograph</h3>
+<p class="text-[11px] text-stone-500 uppercase tracking-widest mt-1">Limited Edition / Black Leather</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs text-stone-400">Qty: 01</span>
+<span class="text-sm font-semibold tracking-wider">$2,450.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-neutral-dark rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Elegant silver watch with metal strap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBZ31X-tZoirimo70urRqJkJTJsB0JVwahzbcctwEEbQ3ogRm07Cs0qxDh2kfV04u1MIQhC8N-ckM7vjp2SBdmcDfa3ERxnEZ3w4iHlX30fM3f7VzRX966e79T8JwESWxFyOyDKotZMPNGrOBgeKhv2NRSR1vqz5f7otQAw7wFaN9r7OYqL9hOjwUGt6PbVvZPASWPcw3p41V8x2katEY72iqGasKzUYxbcmseXrM4CRCtduJOQ037Zm1joyd1ejDyUdJBYoqkkFZb"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<h3 class="text-sm font-medium tracking-wide">Titan Heritage</h3>
+<p class="text-[11px] text-stone-500 uppercase tracking-widest mt-1">Silver Mesh / 42mm</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs text-stone-400">Qty: 01</span>
+<span class="text-sm font-semibold tracking-wider">$1,890.00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-primary/10 space-y-3">
+<div class="flex justify-between text-xs tracking-wide text-stone-400 uppercase">
+<span>Subtotal</span>
+<span>$4,340.00</span>
+</div>
+<div class="flex justify-between text-xs tracking-wide text-stone-400 uppercase">
+<span>Shipping</span>
+<span class="text-primary">Complimentary</span>
+</div>
+<div class="flex justify-between text-xs tracking-wide text-stone-400 uppercase">
+<span>Insurance</span>
+<span>$45.00</span>
+</div>
+</div>
+<div class="pt-6 border-t border-primary/20 flex justify-between items-baseline">
+<span class="text-sm uppercase tracking-widest font-medium">Total</span>
+<span class="text-2xl font-bold tracking-tighter text-primary">$4,385.00</span>
+</div>
+<div class="bg-primary/5 rounded-lg p-4 flex items-start gap-3 border border-primary/10">
+<span class="material-icons text-primary text-lg">verified_user</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary">Luxe Security Guarantee</p>
+<p class="text-[10px] text-stone-400 mt-1 leading-relaxed">Your purchase includes a 2-year international warranty and certified authenticity documentation.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Payment Form -->
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="max-w-xl mx-auto lg:ml-0 space-y-12">
+<section>
+<h2 class="text-sm uppercase tracking-[0.3em] font-light mb-10 flex items-center gap-4">
+                            Payment Details
+                            <span class="h-[1px] flex-grow bg-primary/10"></span>
+</h2>
+<form class="space-y-8">
+<!-- Card Number -->
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-primary/20 py-3 px-0 focus:ring-0 focus:border-primary text-lg tracking-[0.2em] placeholder-stone-700" id="card_number" name="card_number" placeholder=" " type="text"/>
+<label class="absolute left-0 top-3 text-stone-500 text-xs uppercase tracking-widest pointer-events-none transition-all duration-300 origin-left" for="card_number">Card Number</label>
+<div class="absolute right-0 top-3 flex gap-2">
+<span class="material-icons text-stone-500 text-lg">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<!-- Expiry -->
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-primary/20 py-3 px-0 focus:ring-0 focus:border-primary text-lg tracking-widest placeholder-stone-800" id="expiry" name="expiry" placeholder="MM / YY" type="text"/>
+<label class="absolute left-0 -top-3 text-primary text-[10px] uppercase tracking-widest" for="expiry">Expiration Date</label>
+</div>
+<!-- CVV -->
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-primary/20 py-3 px-0 focus:ring-0 focus:border-primary text-lg tracking-widest placeholder-stone-800" id="cvv" name="cvv" placeholder="•••" type="password"/>
+<label class="absolute left-0 -top-3 text-primary text-[10px] uppercase tracking-widest" for="cvv">Security Code</label>
+</div>
+</div>
+<div class="relative pt-4">
+<input class="w-full bg-transparent border-0 border-b border-primary/20 py-3 px-0 focus:ring-0 focus:border-primary text-lg uppercase tracking-widest placeholder-stone-700" id="card_name" name="card_name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-7 text-stone-500 text-xs uppercase tracking-widest pointer-events-none transition-all duration-300 origin-left" for="card_name">Name on Card</label>
+</div>
+<!-- Billing Same as Shipping -->
+<label class="flex items-center gap-3 cursor-pointer group pt-4">
+<div class="relative flex items-center">
+<input checked="" class="peer appearance-none w-5 h-5 border border-primary/40 rounded checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-icons absolute text-background-dark text-sm left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 transition-opacity">check</span>
+</div>
+<span class="text-xs uppercase tracking-widest text-stone-400 group-hover:text-stone-200 transition-colors">Billing address same as shipping</span>
+</label>
+<!-- CTA Button -->
+<div class="pt-6">
+<button class="shimmer-btn w-full bg-primary hover:bg-[#e0af20] text-background-dark font-bold py-5 rounded-lg uppercase tracking-[0.25em] text-sm transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3" type="submit">
+                                    Complete Purchase
+                                    <span class="material-icons text-sm">lock</span>
+</button>
+<p class="text-center text-[10px] text-stone-500 mt-6 uppercase tracking-widest">
+                                    By clicking 'Complete Purchase', you agree to our <a class="underline hover:text-primary transition-colors" href="#">Terms of Service</a>
+</p>
+</div>
+</form>
+</section>
+<!-- Trust Indicators -->
+<div class="flex justify-between items-center opacity-40 pt-10">
+<div class="flex items-center gap-2 grayscale brightness-200">
+<span class="material-icons text-xl">shield</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">SSL Encrypted</span>
+</div>
+<div class="flex gap-4 grayscale brightness-200">
+<img alt="Visa" class="h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf1_5qTe4DsDq0O0kNfbI7oF6Sx_TnuHg4k-S6kbmo48qe0te38bLzlRPfT9IOyOkOi-BYQkVnueyCPful4TO0o_OsiMBcF9cBS2NFW0xq2TOZn56BbGKsJjuuEs95kO50ZAEaMdN0nzoQgUpxi8f8EOPYtrGa3nGH6gpv5HrLlf1An8JU1D_2rJSIjpEI8M082TuvUw9ZieYVGQHoJiJCqrHHPgt806t75F64i6JV0S3yvpa2WNeBocigeoEvVzV4WCDd1g8Gz4Iy"/>
+<img alt="Mastercard" class="h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu7dGTTDvlbnqg4MFZeJmR4Lv9xAmD0l9YWkXYqsFT-L0Zmg5CNzLgnTYsnxMEMp1oOZ1VfKUoBOv81wN7lgq32BOld2L72aaQ5KHuH3ekQbpV3D13eqf-ZkICBB7JIdbpkr4mNZWbWLHw0vNFc6LCbVVeUeq_MnI4QLGr3XqpQN-cSw7x-JZEwbp2FXhFlehGyj6xcw8X0wtByT0eRXSY0BPPrBBVbIoDBhyUrtO5obZQNS0JRWlgBV8ZcZGCpxPs5Q1FcmlMoRib"/>
+<img alt="PayPal" class="h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSlGMxh6vD_83HeghtpfhtWUNPsYPd3Tcrl57IjqCjivBc7KXxHDVLxmKQI4-vSmcVHr-S5qkW7t3G0LZRds-vLXLgeYJkacHp8qo94SnHhIEP6XhIwChcc8TCt8dwYndGSLR6IYDCGFyTjNMvl7I96kj9Kcye96Wv6k72zj6kaTB6Rh21b3VFf5fQVn5uyCsnPbsyNxp68uLwyTSH2LDacVeTApP3Lk-eIqPJVHbHIYGv97hl9P47xtir-V_v8mHRhniOnDJJZ_DU"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="w-full py-10 px-12 border-t border-primary/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] text-stone-500 uppercase tracking-widest">© 2024 Chronos Luxe. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="text-[10px] text-stone-500 uppercase tracking-widest hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-[10px] text-stone-500 uppercase tracking-widest hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a>
+<a class="text-[10px] text-stone-500 uppercase tracking-widest hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full -z-20 pointer-events-none opacity-20">
+<div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px]"></div>
+</div>
+</body></html>

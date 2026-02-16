@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elegant Concierge &amp; Contact | Luxury Horology</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a", // Deep charcoal/black for cinematic feel
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(244, 192, 37, 0.1);
+        }
+        .input-line {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(244, 192, 37, 0.3);
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: border-color 0.3s ease;
+        }
+        .input-line:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #f4c025;
+        }
+        .map-overlay {
+            background: radial-gradient(circle at center, transparent 0%, #0a0a0a 100%);
+        }
+        .marker-pulse {
+            box-shadow: 0 0 0 0 rgba(244, 192, 37, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(244, 192, 37, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(244, 192, 37, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(244, 192, 37, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-hidden selection:bg-primary/30">
+<!-- Header Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 px-12 py-8 flex justify-between items-center bg-gradient-to-b from-background-dark to-transparent">
+<div class="text-2xl font-bold tracking-widest text-primary">
+            AURELIUS
+        </div>
+<div class="hidden md:flex space-x-12 text-xs uppercase tracking-[0.3em] font-medium">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<a class="hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="text-primary" href="#">Contact</a>
+</div>
+<div>
+<span class="material-icons text-white cursor-pointer hover:text-primary">menu</span>
+</div>
+</nav>
+<main class="relative h-screen w-full flex items-center">
+<!-- Background Map Layer -->
+<div class="absolute inset-0 z-0">
+<div class="relative w-full h-full grayscale brightness-[0.2] contrast-[1.2]">
+<img class="w-full h-full object-cover" data-alt="Dark charcoal textured world map silhouette" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0EDCqEPCFaKNAVRYegTVQl6tJawzKLLGMMKVaLMV2uKKWTcidtxMBcocwCD0Q5aEARHK_y4DoPRrouPoTp1DUI6JiM4Byl0QBfucuyQuKLG3Scz-5j5BaSRxIwYTvEFsyM7s_WClw4AbpEfFKK0sBj94llUZ1r1rWo2SUrzJAHGDczXyM31PGalwk5WRz0xDPsITaCcjd3qaUiHLcNio08oDti1j_78eN0OVrS-k6rD3fAeu10ByUnYswwURrrtuKH420tcgbDs72"/>
+<div class="absolute inset-0 map-overlay"></div>
+</div>
+<!-- Map Markers (Boutiques) -->
+<div class="absolute top-[30%] left-[48%] group cursor-pointer">
+<div class="w-3 h-3 bg-primary rounded-full marker-pulse"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-black/80 px-4 py-2 rounded-full border border-primary/20 text-[10px] tracking-widest uppercase">Geneva Flagship</div>
+</div>
+<div class="absolute top-[40%] left-[20%] group cursor-pointer">
+<div class="w-2 h-2 bg-primary/60 rounded-full"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-black/80 px-4 py-2 rounded-full border border-primary/20 text-[10px] tracking-widest uppercase">New York Atelier</div>
+</div>
+<div class="absolute top-[45%] left-[82%] group cursor-pointer">
+<div class="w-2 h-2 bg-primary/60 rounded-full"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-black/80 px-4 py-2 rounded-full border border-primary/20 text-[10px] tracking-widest uppercase">Tokyo Ginza</div>
+</div>
+</div>
+<div class="container mx-auto px-12 relative z-10 flex flex-col md:flex-row justify-between items-end gap-20">
+<!-- Left Side: Information -->
+<div class="w-full md:w-1/3 mb-12 md:mb-0">
+<h1 class="text-6xl font-light mb-8 tracking-tighter leading-none">
+                    Liaise with <br/> <span class="text-primary font-bold italic">Excellence.</span>
+</h1>
+<p class="text-primary/60 text-sm leading-relaxed mb-12 max-w-sm tracking-wide">
+                    Our master horologists and concierge team are at your disposal for private viewings and bespoke commissions.
+                </p>
+<div class="space-y-8">
+<div class="group cursor-pointer">
+<p class="text-[10px] uppercase tracking-[0.4em] text-primary/40 mb-2">Global Headquarters</p>
+<p class="text-lg font-light group-hover:text-primary transition-colors">Rue du Rhône 42, <br/>1204 Genève, Switzerland</p>
+</div>
+<div class="group cursor-pointer">
+<p class="text-[10px] uppercase tracking-[0.4em] text-primary/40 mb-2">Client Services</p>
+<p class="text-lg font-light group-hover:text-primary transition-colors">+41 22 310 00 00</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Contact Form -->
+<div class="w-full md:w-1/2 lg:w-1/3">
+<div class="glass-panel p-10 md:p-14 rounded-xl shadow-2xl">
+<h2 class="text-2xl font-light mb-10 tracking-widest uppercase">Send Inquiry</h2>
+<form class="space-y-10">
+<div class="relative">
+<input class="input-line w-full py-2 text-white placeholder-white/20 focus:placeholder-transparent" id="name" placeholder="Full Name" type="text"/>
+</div>
+<div class="relative">
+<input class="input-line w-full py-2 text-white placeholder-white/20 focus:placeholder-transparent" id="email" placeholder="Email Address" type="email"/>
+</div>
+<div class="relative">
+<select class="input-line w-full py-2 text-white bg-transparent focus:ring-0 appearance-none" id="interest">
+<option class="bg-background-dark" disabled="" selected="" value="">Interest / Collection</option>
+<option class="bg-background-dark" value="legacy">Legacy Series</option>
+<option class="bg-background-dark" value="astronomy">Celestial Edition</option>
+<option class="bg-background-dark" value="bespoke">Bespoke Commission</option>
+</select>
+<span class="material-icons absolute right-0 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none scale-75">expand_more</span>
+</div>
+<div class="relative">
+<textarea class="input-line w-full py-2 text-white placeholder-white/20 focus:placeholder-transparent resize-none" id="message" placeholder="Your Message" rows="1"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-5 rounded-full uppercase tracking-[0.2em] text-xs transition-all transform hover:scale-[1.02] shadow-lg shadow-primary/20" type="submit">
+                            Send Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Concierge Chat Button -->
+<div class="fixed bottom-10 right-10 z-50 flex items-center gap-4">
+<div class="hidden lg:block glass-panel px-6 py-3 rounded-full border border-primary/20">
+<p class="text-[10px] uppercase tracking-widest text-primary/80">Specialist Online</p>
+</div>
+<button class="w-16 h-16 bg-primary/10 backdrop-blur-xl border border-primary/30 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all group shadow-2xl">
+<span class="material-icons group-hover:scale-110 transition-transform">support_agent</span>
+</button>
+</div>
+<!-- Decorative elements -->
+<div class="fixed top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="fixed bottom-0 right-0 translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+</body></html>

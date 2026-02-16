@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brand Heritage | Luxury Watchmaking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #221e10;
+            color: #f8f8f5;
+            scroll-behavior: smooth;
+        }
+        .timeline-line {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #f4c025 10%, #f4c025 90%, transparent);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            z-index: 0;
+        }
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(244, 192, 37, 0.3);
+        }
+        .milestone-dot {
+            box-shadow: 0 0 0 4px rgba(34, 30, 16, 1), 0 0 0 6px rgba(244, 192, 37, 0.4);
+        }
+        .glass-panel {
+            background: rgba(34, 30, 16, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(244, 192, 37, 0.1);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200 selection:bg-primary selection:text-background-dark">
+<!-- Floating Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-gradient-to-b from-background-dark/80 to-transparent backdrop-blur-sm">
+<div class="flex items-center gap-2">
+<span class="text-primary text-2xl font-bold tracking-widest uppercase">Chronos</span>
+</div>
+<div class="hidden md:flex items-center gap-12 text-sm uppercase tracking-[0.2em] font-light">
+<a class="hover:text-primary transition-colors" href="#">The Atelier</a>
+<a class="hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+</div>
+<button class="bg-primary hover:bg-primary/80 text-background-dark px-6 py-2 rounded transition-all flex items-center gap-2 group">
+<span class="text-xs font-bold uppercase tracking-widest">Back to Collection</span>
+<span class="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Master watchmaker working" class="w-full h-full object-cover opacity-40 scale-110" data-alt="Close up of master watchmaker working on a movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCajWbnXrQxmdEZo6sa584G-Ygm6FDVYEokWmhzm1wBTk18PX8NQNz9DyTVs5swwB8scNIIfoxNuki4j5z28YBHfsMOW7YyspoV-XqrTftRi7u0d9Ji2Rucdkpqk6t5PrA8Zb0ptVUt-ZiVQAqHiJlmbSy8Ug7e0as-FKz4o-yhFDgg060vyKb-PlFEazp0cqsm0uT1LNxWh-RA8Z5k03E6wnV37muIDX2jzmdD_uhyiSCdYTH6MhLUzj-6ZyTRmFiIS1JCS5xd4cxz"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/20 via-background-dark/60 to-background-dark"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<span class="text-primary uppercase tracking-[0.4em] text-sm mb-6 block opacity-0 animate-[fadeIn_1s_ease-out_forwards]">A Legacy of Precision</span>
+<h1 class="text-6xl md:text-8xl font-light mb-8 italic leading-tight text-glow">The Hands of <br/>Time</h1>
+<p class="text-lg md:text-xl text-stone-400 font-light max-w-2xl mx-auto leading-relaxed">
+                Tracing two centuries of horological mastery, from the first spark of inspiration in the Swiss Alps to the pinnacle of modern mechanical art.
+            </p>
+<div class="mt-12 animate-bounce">
+<span class="material-icons text-primary/50">keyboard_double_arrow_down</span>
+</div>
+</div>
+</header>
+<!-- Main Timeline Section -->
+<main class="relative py-32">
+<div class="timeline-line"></div>
+<!-- 1892 Milestone -->
+<section class="relative mb-64 flex flex-col items-center">
+<div class="milestone-dot w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 z-10 top-0"></div>
+<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
+<div class="order-2 md:order-1 flex justify-end">
+<div class="max-w-md text-right">
+<span class="text-primary text-6xl md:text-8xl font-thin block mb-4 italic">1892</span>
+<h3 class="text-3xl font-light mb-6">The Founding Hearth</h3>
+<p class="text-stone-400 leading-relaxed text-lg">
+                            In a small workshop nestled in the Jura Mountains, Elias Sterling assembled his first complication. It was not just a tool for time, but a statement of enduring human ingenuity.
+                        </p>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<img alt="Vintage watch parts" class="rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Macro photo of vintage brass watch movements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZygL3a0LtoWQg6TZUXZZTtZ9jwSke7J5qNupxl87gC0xg84gHvXRP3WfQfvkD63iw-gkUGIS1XAEcvecuBMjXhKBA99RRUrzCoXnyxKHNwV9R8D_BDAT5F-LgSKEac-2P5pJriPMb7meRBbs13ikDyOZwzmJEowLJlaxS4Wp2bbeWOXekj7lU5MBIORnZKJJlxB5UYlWW8AUdJTDXdFn6NWUe4xEFL2JK937PIT_CV-NHP85L3ohccSdzZJR2ruz_wU-r2aFBVmc9"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Parallax Break 1 -->
+<section class="parallax-section h-[60vh] my-32 relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0">
+<img alt="Movement detail" class="w-full h-full object-cover opacity-30 fixed top-0 left-0 -z-10" data-alt="Extreme close up of a ticking watch escapement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWnVxqEyzxZEQE7XOaxpmAT-EM2kUX1ampnS0AidxCfxcP_cqBPzMHtW5kph9uzMiFduyGzUyoZKS_ikKiPX6J4eA33i9Vx8ilH8TVt0PJiCkkUwOhwPHXwIZRmK2vwFrMAUU2yVLd3JjT--iIv5LKHENWFNtfUzB0vN88DhvFFplqgAQspwOEynW4m1c3xVJhV4SeeWno9CLSRv6Zm1hrpOWvtpBN15UJyOaOCrJvGO86ypHCllXbXQZUjwcV2WCwpkN40c4F-2YR"/>
+<div class="absolute inset-0 bg-background-dark/50"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<blockquote class="text-3xl md:text-5xl font-extralight italic max-w-4xl mx-auto leading-tight text-stone-200">
+                    "Precision is not an achievement, but a continuous pursuit of the impossible."
+                </blockquote>
+</div>
+</section>
+<!-- 1945 Milestone -->
+<section class="relative mb-64 flex flex-col items-center">
+<div class="milestone-dot w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 z-10 top-0"></div>
+<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
+<div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<img alt="Post-war era watch design" class="rounded-lg shadow-2xl relative z-10" data-alt="Elegant mid-century golden watch on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPl8pkS6S-OY_q-ytGo5MYEwbZ0HdKygTbG5fU6VF6PT1cYiBuZGc9V8863n_zCt0bStYn1azY63K0_a41BT-viMTIShFR4UtGYxuMYUWLYMfr7Jg6i47bZr3b47L7eVWazBnf74WyNFf_m1D578Hch-Mtoehq4nt908riFJrIIHMwWghVJ5Ut9msrKS_Ox4ib1Gr3iMrH2FzBZKOJgv072FgV1CZFYkHVWQ5NCkRJSS5qAEhdmuoA2h5kMPGLSD7ofkInBycZS0v2"/>
+</div>
+</div>
+<div class="flex justify-start">
+<div class="max-w-md">
+<span class="text-primary text-6xl md:text-8xl font-thin block mb-4 italic">1945</span>
+<h3 class="text-3xl font-light mb-6">The Golden Standard</h3>
+<p class="text-stone-400 leading-relaxed text-lg">
+                            The introduction of the 'Aeterna' movement set a new global benchmark for accuracy. Adopted by aviators and explorers, it survived the harshest conditions known to man.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 2008 Milestone (Macro focus) -->
+<section class="relative mb-64 flex flex-col items-center">
+<div class="milestone-dot w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 z-10 top-0"></div>
+<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
+<div class="order-2 md:order-1 flex justify-end">
+<div class="max-w-md text-right">
+<span class="text-primary text-6xl md:text-8xl font-thin block mb-4 italic">2008</span>
+<h3 class="text-3xl font-light mb-6">Silicon &amp; Soul</h3>
+<p class="text-stone-400 leading-relaxed text-lg">
+                            Integrating high-tech materials with traditional finishing. The first escapement crafted from monocrystalline silicon, virtually eliminating friction.
+                        </p>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="bg-background-dark p-2 border border-primary/20 rounded-xl relative overflow-hidden group">
+<img alt="Modern watch movement" class="rounded-lg shadow-inner group-hover:scale-105 transition-transform duration-1000" data-alt="Futuristic high-end watch movement with visible gears" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3DttJbepQinXMgmDsWp3ZSzVdHygtOarEn8zcy2TA6WjgmQcvvmqoq-MGXobFpz-m9GamY-RZ1MkckrxWY_7F1CUrI3EMZTpISVvNKxB9RSePCI1C9uZdsiqEoSdHmZdJ8gXW7ihdmrlPsdy9PnF8Ktrx4aESxftSTm4udgM3qNDPGseJCShrNyX76P1OSKvPJwWer5Fq6khMR5rBX3ddqJEWa3PYDgodhCM0KGqLWfJz5UjS1sSPGU_ee64U4q-_Tui6xgOhg5uu"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Modern Era Hero -->
+<section class="relative py-40 overflow-hidden bg-background-dark">
+<div class="container mx-auto px-4">
+<div class="text-center mb-24">
+<span class="text-primary uppercase tracking-widest text-sm mb-4 block">The Present Day</span>
+<h2 class="text-5xl md:text-7xl font-light italic">The New Classic</h2>
+</div>
+<div class="relative max-w-6xl mx-auto h-[600px]">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-[120px]"></div>
+<img alt="Modern luxury watch" class="w-full h-full object-contain relative z-10 drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]" data-alt="A modern luxury gold watch on a black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG8z0spJzSDGqDCh9G2csnaPazX3AoV38Gqmx-tPejwbBIvgN0QFKdtiZb5Ho91abnkmMWLJv6cIIZ7XUDdZ_foQjyi_wYzW2ZOOy2J6b2K4utb3hAiEVg25BhzgveYFre05Py8zd-8u3AVdNHT6Hhc_uNB4p4fINdH002Y8SWi_wVmFSJzJjkwbm5NMYbs_qfh5HkQgKZLL5rk0GI_MfXjqjWD5wyeOUEfarUaOayP3Uq0Qi6Fw_I__XqFRQDpi-Oh84uAgiDrk7u"/>
+<!-- Floating Info Nodes -->
+<div class="absolute top-1/4 left-10 md:left-20 glass-panel p-6 rounded-xl max-w-xs z-20">
+<p class="text-xs text-primary uppercase tracking-tighter mb-2">Bezel Material</p>
+<p class="text-sm font-light">18K Frosted Gold, hand-hammered for a shimmering finish.</p>
+</div>
+<div class="absolute bottom-1/4 right-10 md:right-20 glass-panel p-6 rounded-xl max-w-xs z-20">
+<p class="text-xs text-primary uppercase tracking-tighter mb-2">Power Reserve</p>
+<p class="text-sm font-light">72-hour autonomous movement with dual-barrel technology.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer / CTA -->
+<footer class="bg-background-dark border-t border-primary/10 py-32">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-4xl md:text-6xl font-light mb-12">Carry the Heritage.</h2>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-primary text-background-dark px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+                    Explore Modern Collections
+                </button>
+<button class="border border-primary/40 text-primary px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-primary/5 transition-colors">
+                    Find a Boutique
+                </button>
+</div>
+<div class="mt-40 grid grid-cols-1 md:grid-cols-4 gap-12 text-left opacity-60 text-sm">
+<div>
+<h4 class="text-white mb-6 uppercase tracking-widest">Heritage</h4>
+<ul class="space-y-4 font-light">
+<li><a class="hover:text-primary transition-colors" href="#">The Archives</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Museum Pieces</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Craft</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white mb-6 uppercase tracking-widest">Atelier</h4>
+<ul class="space-y-4 font-light">
+<li><a class="hover:text-primary transition-colors" href="#">Manufacturing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Complications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white mb-6 uppercase tracking-widest">Legal</h4>
+<ul class="space-y-4 font-light">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Use</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white mb-6 uppercase tracking-widest">Follow</h4>
+<div class="flex gap-4">
+<span class="material-icons cursor-pointer hover:text-primary">camera_alt</span>
+<span class="material-icons cursor-pointer hover:text-primary">movie</span>
+<span class="material-icons cursor-pointer hover:text-primary">public</span>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-10 border-t border-primary/5 text-xs tracking-widest opacity-40">
+                © 2024 CHRONOS HOROLOGY. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<!-- Progress Indicator (Scroll) -->
+<div class="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 z-50">
+<span class="text-[10px] text-primary/40 uppercase rotate-90 mb-8 tracking-widest">Timeline</span>
+<div class="w-[2px] h-32 bg-stone-800 relative">
+<div class="absolute top-0 left-0 w-full h-1/3 bg-primary"></div>
+</div>
+<span class="text-[10px] text-primary mt-8">1892</span>
+</div>
+</body></html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aethelgard | Luxury Watch Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f4c025",
+                "background-light": "#f8f8f5",
+                "background-dark": "#0a0a08",
+                "panel-dark": "#161614",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(244, 192, 37, 0.05);
+            border-color: rgba(244, 192, 37, 0.3);
+            box-shadow: 0 0 40px rgba(244, 192, 37, 0.1);
+            transform: translateY(-8px) scale(1.02);
+        }
+        .watch-shadow {
+            filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.5));
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #f4c025;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display min-h-screen selection:bg-primary selection:text-black">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-bold tracking-tighter flex items-center gap-2" href="#">
+<span class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-black">
+<span class="material-icons-outlined text-sm">precision_manufacturing</span>
+</span>
+                    AETHELGARD
+                </a>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">COLLECTIONS</a>
+<a class="hover:text-primary transition-colors" href="#">HERITAGE</a>
+<a class="hover:text-primary transition-colors" href="#">BESPOKE</a>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<!-- Limited Edition Toggle -->
+<div class="flex items-center gap-3 px-4 py-2 rounded-full border border-primary/20 bg-primary/5">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary">LIMITED EDITION</span>
+<button class="relative inline-flex h-5 w-10 items-center rounded-full bg-slate-700">
+<span class="inline-block h-3 w-3 transform rounded-full bg-primary translate-x-6 transition-transform"></span>
+</button>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-icons-outlined hover:text-primary transition-colors">search</button>
+<button class="material-icons-outlined hover:text-primary transition-colors">favorite_border</button>
+<div class="relative">
+<button class="material-icons-outlined hover:text-primary transition-colors">shopping_bag</button>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-black text-[10px] font-bold rounded-full flex items-center justify-center">2</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-[1600px] mx-auto px-6 py-8 flex gap-8">
+<!-- Filter Panel -->
+<aside class="w-72 flex-shrink-0 sticky top-28 h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar pr-4">
+<div class="space-y-10">
+<div>
+<h3 class="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">View Mode</h3>
+<div class="flex bg-slate-900/50 p-1 rounded-lg">
+<button class="flex-1 py-2 flex items-center justify-center rounded-md bg-primary text-black">
+<span class="material-icons-outlined text-sm">grid_view</span>
+</button>
+<button class="flex-1 py-2 flex items-center justify-center rounded-md text-slate-400 hover:text-primary">
+<span class="material-icons-outlined text-sm">view_list</span>
+</button>
+</div>
+</div>
+<div>
+<h3 class="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">Material</h3>
+<div class="space-y-4">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-sm font-light group-hover:text-primary transition-colors">Rose Gold (18K)</span>
+<div class="w-4 h-4 border border-primary rounded-sm flex items-center justify-center">
+<div class="w-2 h-2 bg-primary"></div>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-sm font-light group-hover:text-primary transition-colors">Brushed Titanium</span>
+<div class="w-4 h-4 border border-slate-600 rounded-sm"></div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-sm font-light group-hover:text-primary transition-colors">Onyx Carbon</span>
+<div class="w-4 h-4 border border-slate-600 rounded-sm"></div>
+</label>
+</div>
+</div>
+<div>
+<h3 class="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">Movement</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 text-[10px] border border-slate-700 rounded-md hover:border-primary transition-colors uppercase">Automatic</button>
+<button class="px-3 py-2 text-[10px] border border-primary bg-primary/10 rounded-md text-primary uppercase">Tourbillon</button>
+<button class="px-3 py-2 text-[10px] border border-slate-700 rounded-md hover:border-primary transition-colors uppercase">Manual</button>
+<button class="px-3 py-2 text-[10px] border border-slate-700 rounded-md hover:border-primary transition-colors uppercase">Quartz</button>
+</div>
+</div>
+<div>
+<h3 class="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">Case Diameter</h3>
+<input class="w-full accent-primary h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer" type="range"/>
+<div class="flex justify-between mt-3 text-[10px] text-slate-400 font-medium">
+<span>38MM</span>
+<span>44MM</span>
+</div>
+</div>
+<div class="pt-6 border-t border-slate-800/50">
+<button class="w-full py-4 bg-primary/10 text-primary border border-primary/20 text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-all rounded-md">
+                        RESET FILTERS
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h1 class="text-4xl font-bold tracking-tight mb-2 uppercase">Horizon Series</h1>
+<p class="text-slate-500 text-sm">24 Timeless pieces curated for the modern explorer.</p>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<span class="text-slate-500">SORT BY:</span>
+<button class="flex items-center gap-2 font-medium">
+                        PRESTIGE HIGH-LOW
+                        <span class="material-icons-outlined text-xs">expand_more</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="glass-card rounded-xl p-6 group relative overflow-hidden">
+<div class="absolute top-6 right-6 z-10">
+<span class="bg-primary/90 text-black px-2 py-1 text-[10px] font-bold tracking-tighter rounded-sm">NEW ERA</span>
+</div>
+<div class="h-64 flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-50 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Luxury Black Watch" class="h-full w-full object-contain watch-shadow relative z-10" data-alt="Modern black luxury watch with leather strap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhysZ1mW6ck8ZYMWqPwc8SNyS82ueTr-DCqPHSKg3xkBX7IiLe4V5z0epRVIwNR3rmV7e8L41ljqGl8Erof1-NcgzkUXaXQmqv55oQokPUXYvGVjXpniGu5J41lehhHyKDwjmFM30xn4TcDk6GBGRucSDCmyIqfZKH8g-F8ocyKB5-833Z3h55FczQabH3a1J8qxrIvVtyYA_wC8BxmdmocFK3brUP0Gt51KRT3uq3XtstKrXCmu3pzSwWIBVGWr1_kxFdHF-nB35d"/>
+<div class="absolute bottom-0 left-0 right-0 flex justify-center gap-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">visibility</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<p class="text-primary text-[10px] font-bold tracking-[0.2em] mb-1">CHRONOGRAPH</p>
+<h2 class="text-xl font-bold mb-4">Aethelgard Obsidian X</h2>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-light">$12,400</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-slate-800 ring-1 ring-offset-2 ring-offset-black ring-slate-400"></div>
+<div class="w-3 h-3 rounded-full bg-primary/20 ring-1 ring-slate-800"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-xl p-6 group relative overflow-hidden">
+<div class="absolute top-6 right-6 z-10">
+<span class="bg-slate-800 text-white px-2 py-1 text-[10px] font-bold tracking-tighter rounded-sm">ONLY 5 LEFT</span>
+</div>
+<div class="h-64 flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-50 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Titanium Watch" class="h-full w-full object-contain watch-shadow relative z-10" data-alt="Sleek silver titanium watch with metal band" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5puikYYdmcVkbk8MpwdschfwZk4_vz8c6URNmo20TZxgSjmxyHQU-3NNMXy78iZ_cycvVHVJQQFM9s9SU2faXVj6WEPxWo3swY9X0c-i-Xou-hiuKuZVo-ShLXOtpo5FhU-R9tFrK3uOAXyIjf5HCDsREXI_DdJIKSZLhi0HwQln-2mG5SCu7o-IGyOzJSdet8wa7Tq7Dwd5WGp5Bd_0pCR-60AEtmSanfYqsLOLB8WWHAnIW7rVB1UCJ-FtUQPkdYCBLAs8CUyr5"/>
+<div class="absolute bottom-0 left-0 right-0 flex justify-center gap-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">visibility</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<p class="text-primary text-[10px] font-bold tracking-[0.2em] mb-1">TOURBILLON</p>
+<h2 class="text-xl font-bold mb-4">Zenith Stellar Blue</h2>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-light">$24,900</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-blue-600 ring-1 ring-offset-2 ring-offset-black ring-blue-400"></div>
+<div class="w-3 h-3 rounded-full bg-slate-800 ring-1 ring-slate-800"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card rounded-xl p-6 group relative overflow-hidden">
+<div class="h-64 flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-50 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Rose Gold Watch" class="h-full w-full object-contain watch-shadow relative z-10" data-alt="Luxury rose gold watch with black face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmng-sjmnkdjm2PeZFfqIz-BeJBY8gG6F8QkVszVSBzJpGae2xZhQwledn_cez9j4jClaaZpJPoYaljGAmJl3vj8WjfPu1VjW-yP-4IgymAZ2NOt_pw46GCYi9Nu1Y2sjixybv2DsUyxUPdMUuZqly7UOnQmsvm1g7cKfMeaQvVJHCYKBCsbPFcLXE6923oEeCXKHSCNySER6W-hNhLfIRdgiFJHFBN5-6yoDT73Z29gkd37fQmkyH1mIsUtnYPLdtTulL4ZRhJjh8"/>
+<div class="absolute bottom-0 left-0 right-0 flex justify-center gap-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">visibility</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<p class="text-primary text-[10px] font-bold tracking-[0.2em] mb-1">AUTOMATIC</p>
+<h2 class="text-xl font-bold mb-4">Vanguard Rose Gold</h2>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-light">$18,200</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-amber-700 ring-1 ring-offset-2 ring-offset-black ring-amber-500"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glass-card rounded-xl p-6 group relative overflow-hidden">
+<div class="h-64 flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-50 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Silver Watch" class="h-full w-full object-contain watch-shadow relative z-10" data-alt="Elegant silver watch with simple white face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy2_f_HUGXZ-w0T1CCpZiDsCvwipqTcSAfrdGn7I6l8Yj71f4HOMGgTgQPNkK6660Afue0B2DrwcLw2PZ-cBR6MKh0W5pqdQiD-eFV2puU_izzdQpIIhv8B8Xk0YkESLzj488WdevaqZtxh19P3EhgsE3x_1uxU8a5YhcAQooQJMVetszGgw6WJZA-Dw2yblP7f_59XMDAU0BSEu390HnwnfdTGn-_EvXnOsWldXMniBbri21rGfQVa2qkHO1MXN_HBY-uHfH6Y52-"/>
+<div class="absolute bottom-0 left-0 right-0 flex justify-center gap-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">visibility</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<p class="text-primary text-[10px] font-bold tracking-[0.2em] mb-1">QUARTZ</p>
+<h2 class="text-xl font-bold mb-4">Celestial Ivory</h2>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-light">$8,900</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-slate-200 ring-1 ring-offset-2 ring-offset-black ring-slate-100"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="glass-card rounded-xl p-6 group relative overflow-hidden">
+<div class="absolute top-6 right-6 z-10">
+<span class="bg-primary text-black px-2 py-1 text-[10px] font-bold tracking-tighter rounded-sm">LIMITÉ</span>
+</div>
+<div class="h-64 flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-50 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Gold Limited" class="h-full w-full object-contain watch-shadow relative z-10" data-alt="Prestigious solid gold limited edition watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmbqtCWlzTs-JklqgiC_Lc7yMldltvDtrGI_5cYrqkMEq9gGc2mIxsuAGlUgS56axserdqQxZxLj6BRocyL_-dZlPy1y8alzmn9_WzpH9Rfnj4gBwxtWlzEyj9YZGjoHppL7d_GD-cxfCV0m_KYWCsHS7ncFdblkon9tH109gp95s0Zt67GxD1Qz4v5dPhCr4gYrPshpta1BanY5uWJv-3rfWVX3bCWCPgf2fU-6usXbn_YFwSdNEoVdREHGkpSsnvZMaL_2BXRYSr"/>
+<div class="absolute bottom-0 left-0 right-0 flex justify-center gap-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">visibility</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<p class="text-primary text-[10px] font-bold tracking-[0.2em] mb-1">MANUAL CALIBRE</p>
+<h2 class="text-xl font-bold mb-4">Heritage Gold 1948</h2>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-light text-primary">$42,000</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-primary ring-1 ring-offset-2 ring-offset-black ring-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="glass-card rounded-xl p-6 group relative overflow-hidden">
+<div class="h-64 flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-50 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Industrial Watch" class="h-full w-full object-contain watch-shadow relative z-10" data-alt="Industrial style titanium watch with skeleton face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE1x7v07wS7hiLS1nk8WwHnahbbgxECuFy9Vb0P2Ooh9-RQ7eSmNW4wppE3I1h8EtC1V_OWYT2WpwwNO2TUKygny3LdFYZa9f1Smi1cK1j3zaMBj0G44eJ-nv9h0legPaT5O3LRUwAZJ6cLvYNBChgYPOToVApJjftgWKFB4H7FD_pv9uw_R_KSYH8NnhCqlCwsuG7Op9plFV49soZdpjBAeOFwA20taUcFXl2eAO-AuqEH395XSw9yeoZcaqAlGvWFr-sKjgivlbP"/>
+<div class="absolute bottom-0 left-0 right-0 flex justify-center gap-3 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">visibility</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-icons-outlined text-sm">shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<p class="text-primary text-[10px] font-bold tracking-[0.2em] mb-1">AUTOMATIC</p>
+<h2 class="text-xl font-bold mb-4">Titanium Skeleton</h2>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-light">$15,750</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-slate-400 ring-1 ring-offset-2 ring-offset-black ring-slate-300"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-10">
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-icons-outlined">west</span>
+<span class="text-xs font-bold tracking-widest">PREVIOUS</span>
+</button>
+<div class="flex gap-6">
+<span class="text-primary font-bold">01</span>
+<span class="text-slate-600 font-bold hover:text-white cursor-pointer transition-colors">02</span>
+<span class="text-slate-600 font-bold hover:text-white cursor-pointer transition-colors">03</span>
+</div>
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors">
+<span class="text-xs font-bold tracking-widest">NEXT</span>
+<span class="material-icons-outlined">east</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-20 border-t border-slate-900 bg-background-dark py-12 px-6">
+<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 opacity-50">
+<span class="material-icons-outlined text-sm">precision_manufacturing</span>
+<span class="text-sm font-bold tracking-widest">AETHELGARD MANUFACTURE</span>
+</div>
+<div class="flex gap-12 text-[10px] font-bold tracking-[0.3em] text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">PRIVACY POLICY</a>
+<a class="hover:text-primary transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="hover:text-primary transition-colors" href="#">CONTACT BOUTIQUE</a>
+</div>
+<div class="flex gap-6">
+<a class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-icons-outlined text-lg">facebook</span>
+</a>
+<a class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-icons-outlined text-lg">camera</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
