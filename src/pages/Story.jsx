@@ -31,18 +31,18 @@ const Story = () => {
             </header>
 
             {/* Main Timeline Section */}
-            <main className="relative py-32 overflow-hidden">
+            <main className="relative py-20 md:py-32 overflow-hidden">
                 <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-primary to-transparent opacity-30 hidden md:block"></div>
 
                 {/* 1892 Milestone */}
-                <section className="relative mb-64 flex flex-col items-center">
+                <section className="relative mb-32 md:mb-64 flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 z-10 top-0 shadow-[0_0_0_4px_#221e10,0_0_0_6px_rgba(244,192,37,0.4)] hidden md:block"></div>
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
+                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mt-12 md:mt-20">
                         <div className="order-2 md:order-1 flex justify-end">
-                            <div className="max-w-md text-right">
-                                <span className="text-primary text-6xl md:text-8xl font-thin block mb-4 italic font-serif">1892</span>
+                            <div className="max-w-md text-left md:text-right">
+                                <span className="text-primary text-5xl md:text-8xl font-thin block mb-4 italic font-serif">1892</span>
                                 <h3 className="text-3xl font-light mb-6 font-serif">The Founding Hearth</h3>
-                                <p className="text-stone-400 leading-relaxed text-lg">
+                                <p className="text-stone-400 leading-relaxed text-base md:text-lg">
                                     In a small workshop nestled in the Jura Mountains, Elias Sterling assembled his first complication. It was not just a tool for time, but a statement of enduring human ingenuity.
                                 </p>
                             </div>
@@ -61,19 +61,19 @@ const Story = () => {
                 </section>
 
                 {/* Parallax Break */}
-                <section className="h-[60vh] my-32 relative overflow-hidden flex items-center justify-center bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWnVxqEyzxZEQE7XOaxpmAT-EM2kUX1ampnS0AidxCfxcP_cqBPzMHtW5kph9uzMiFduyGzUyoZKS_ikKiPX6J4eA33i9Vx8ilH8TVt0PJiCkkUwOhwPHXwIZRmK2vwFrMAUU2yVLd3JjT--iIv5LKHENWFNtfUzB0vN88DhvFFplqgAQspwOEynW4m1c3xVJhV4SeeWno9CLSRv6Zm1hrpOWvtpBN15UJyOaOCrJvGO86ypHCllXbXQZUjwcV2WCwpkN40c4F-2YR')" }}>
+                <section className="h-[40vh] md:h-[60vh] my-20 md:my-32 relative overflow-hidden flex items-center justify-center bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWnVxqEyzxZEQE7XOaxpmAT-EM2kUX1ampnS0AidxCfxcP_cqBPzMHtW5kph9uzMiFduyGzUyoZKS_ikKiPX6J4eA33i9Vx8ilH8TVt0PJiCkkUwOhwPHXwIZRmK2vwFrMAUU2yVLd3JjT--iIv5LKHENWFNtfUzB0vN88DhvFFplqgAQspwOEynW4m1c3xVJhV4SeeWno9CLSRv6Zm1hrpOWvtpBN15UJyOaOCrJvGO86ypHCllXbXQZUjwcV2WCwpkN40c4F-2YR')" }}>
                     <div className="absolute inset-0 bg-[#221e10]/50"></div>
                     <div className="relative z-10 text-center px-4">
-                        <blockquote className="text-3xl md:text-5xl font-extralight italic max-w-4xl mx-auto leading-tight text-stone-200 font-serif">
+                        <blockquote className="text-2xl md:text-5xl font-extralight italic max-w-4xl mx-auto leading-tight text-stone-200 font-serif">
                             "Precision is not an achievement, but a continuous pursuit of the impossible."
                         </blockquote>
                     </div>
                 </section>
 
                 {/* 1945 Milestone */}
-                <section className="relative mb-64 flex flex-col items-center">
+                <section className="relative mb-32 md:mb-64 flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 z-10 top-0 shadow-[0_0_0_4px_#221e10,0_0_0_6px_rgba(244,192,37,0.4)] hidden md:block"></div>
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
+                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mt-12 md:mt-20">
                         <div>
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-all"></div>
@@ -86,9 +86,9 @@ const Story = () => {
                         </div>
                         <div className="flex justify-start">
                             <div className="max-w-md">
-                                <span className="text-primary text-6xl md:text-8xl font-thin block mb-4 italic font-serif">1945</span>
+                                <span className="text-primary text-5xl md:text-8xl font-thin block mb-4 italic font-serif">1945</span>
                                 <h3 className="text-3xl font-light mb-6 font-serif">The Golden Standard</h3>
-                                <p className="text-stone-400 leading-relaxed text-lg">
+                                <p className="text-stone-400 leading-relaxed text-base md:text-lg">
                                     The introduction of the 'Aeterna' movement set a new global benchmark for accuracy. Adopted by aviators and explorers, it survived the harshest conditions known to man.
                                 </p>
                             </div>
@@ -97,14 +97,14 @@ const Story = () => {
                 </section>
 
                 {/* 2008 Milestone */}
-                <section className="relative mb-64 flex flex-col items-center">
+                <section className="relative mb-32 md:mb-64 flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 z-10 top-0 shadow-[0_0_0_4px_#221e10,0_0_0_6px_rgba(244,192,37,0.4)] hidden md:block"></div>
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
+                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mt-12 md:mt-20">
                         <div className="order-2 md:order-1 flex justify-end">
-                            <div className="max-w-md text-right">
-                                <span className="text-primary text-6xl md:text-8xl font-thin block mb-4 italic font-serif">2008</span>
+                            <div className="max-w-md text-left md:text-right">
+                                <span className="text-primary text-5xl md:text-8xl font-thin block mb-4 italic font-serif">2008</span>
                                 <h3 className="text-3xl font-light mb-6 font-serif">Silicon & Soul</h3>
-                                <p className="text-stone-400 leading-relaxed text-lg">
+                                <p className="text-stone-400 leading-relaxed text-base md:text-lg">
                                     Integrating high-tech materials with traditional finishing. The first escapement crafted from monocrystalline silicon, virtually eliminating friction.
                                 </p>
                             </div>
@@ -124,13 +124,13 @@ const Story = () => {
             </main>
 
             {/* Modern Era Hero */}
-            <section className="relative py-40 overflow-hidden bg-[#221e10]">
+            <section className="relative py-20 md:py-40 overflow-hidden bg-[#221e10]">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-24">
+                    <div className="text-center mb-16 md:mb-24">
                         <span className="text-primary uppercase tracking-widest text-sm mb-4 block">The Present Day</span>
-                        <h2 className="text-5xl md:text-7xl font-light italic font-serif">The New Classic</h2>
+                        <h2 className="text-4xl md:text-7xl font-light italic font-serif">The New Classic</h2>
                     </div>
-                    <div className="relative max-w-6xl mx-auto h-[400px] md:h-[600px]">
+                    <div className="relative max-w-6xl mx-auto h-[300px] md:h-[600px]">
                         <div className="absolute inset-0 bg-primary/5 rounded-full blur-[120px]"></div>
                         <img
                             alt="Modern luxury watch"

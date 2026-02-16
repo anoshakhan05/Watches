@@ -31,13 +31,13 @@ const Contact = () => {
                     ))}
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row justify-between items-end gap-20 w-full mb-12">
+                <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row justify-between items-end gap-12 md:gap-20 w-full mb-12">
                     {/* Left Side: Information */}
                     <div className="w-full md:w-1/3 mb-12 md:mb-0">
-                        <h1 className="text-6xl font-light mb-8 tracking-tighter leading-none">
+                        <h1 className="text-4xl md:text-6xl font-light mb-6 md:mb-8 tracking-tighter leading-none">
                             Liaise with <br /> <span className="text-primary font-bold italic font-serif">Excellence.</span>
                         </h1>
-                        <p className="text-primary/60 text-sm leading-relaxed mb-12 max-w-sm tracking-wide">
+                        <p className="text-primary/60 text-sm leading-relaxed mb-8 md:mb-12 max-w-sm tracking-wide">
                             Our master horologists and concierge team are at your disposal for private viewings and bespoke commissions.
                         </p>
                         <div className="space-y-8">
@@ -54,9 +54,9 @@ const Contact = () => {
 
                     {/* Right Side: Contact Form */}
                     <div className="w-full md:w-1/2 lg:w-1/3">
-                        <div className="glass-card p-10 md:p-14 rounded-xl shadow-2xl bg-black/60 backdrop-blur-md border border-primary/10">
-                            <h2 className="text-2xl font-light mb-10 tracking-widest uppercase">Send Inquiry</h2>
-                            <form className="space-y-10">
+                        <div className="glass-card p-6 md:p-14 rounded-xl shadow-2xl bg-black/60 backdrop-blur-md border border-primary/10">
+                            <h2 className="text-xl md:text-2xl font-light mb-6 md:mb-10 tracking-widest uppercase">Send Inquiry</h2>
+                            <form className="space-y-6 md:space-y-10">
                                 <div className="relative">
                                     <input className="w-full bg-transparent border-0 border-b border-primary/30 py-2 text-white placeholder-white/20 focus:ring-0 focus:border-primary transition-colors" placeholder="Full Name" type="text" />
                                 </div>

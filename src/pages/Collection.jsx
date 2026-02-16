@@ -1,14 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import { Grid, List, Eye, ShoppingBag } from 'lucide-react';
+import { Grid, List, Eye, ShoppingBag, Filter, X } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Collection = () => {
     const containerRef = useRef(null);
     const sidebarRef = useRef(null);
     const gridRef = useRef(null);
+    const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
     useGSAP(() => {
         // Animate Sidebar
@@ -102,52 +104,88 @@ const Collection = () => {
         }
     ];
 
+    const toggleFilters = () => setIsFiltersOpen(!isFiltersOpen);
+
+    const FilterContent = () => (
+        <div className="space-y-10">
+            <div>
+                <h3 className="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">View Mode</h3>
+                <div className="flex bg-slate-900/50 p-1 rounded-lg">
+                    <button className="flex-1 py-2 flex items-center justify-center rounded-md bg-primary text-black">
+                        <Grid className="w-4 h-4" />
+                    </button>
+                    <button className="flex-1 py-2 flex items-center justify-center rounded-md text-slate-400 hover:text-primary">
+                        <List className="w-4 h-4" />
+                    </button>
+                </div>
+            </div>
+            {/* Filters */}
+            <div>
+                <h3 className="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">Movement</h3>
+                <div className="grid grid-cols-2 gap-2">
+                    {['Automatic', 'Tourbillon', 'Manual', 'Quartz'].map(m => (
+                        <button key={m} className={`px-3 py-2 text-[10px] border rounded-md uppercase transition-colors ${m === 'Tourbillon' ? 'border-primary bg-primary/10 text-primary' : 'border-slate-700 hover:border-primary'}`}>
+                            {m}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            <div className="pt-6 border-t border-slate-800/50">
+                <button className="w-full py-4 bg-primary/10 text-primary border border-primary/20 text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-all rounded-md">
+                    RESET FILTERS
+                </button>
+            </div>
+        </div>
+    );
+
     return (
         <div ref={containerRef} className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display min-h-screen selection:bg-primary selection:text-black">
             <Navbar />
 
-            <main className="max-w-[1600px] mx-auto px-6 py-8 flex gap-8 pt-32">
-                {/* Filter Panel */}
+            <main className="max-w-[1600px] mx-auto px-4 md:px-6 py-8 flex gap-8 pt-24 md:pt-32">
+                {/* Desktop Sidebar */}
                 <aside ref={sidebarRef} className="w-72 flex-shrink-0 sticky top-28 h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar pr-4 hidden lg:block">
-                    <div className="space-y-10">
-                        <div>
-                            <h3 className="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">View Mode</h3>
-                            <div className="flex bg-slate-900/50 p-1 rounded-lg">
-                                <button className="flex-1 py-2 flex items-center justify-center rounded-md bg-primary text-black">
-                                    <Grid className="w-4 h-4" />
-                                </button>
-                                <button className="flex-1 py-2 flex items-center justify-center rounded-md text-slate-400 hover:text-primary">
-                                    <List className="w-4 h-4" />
-                                </button>
-                            </div>
-                        </div>
-                        {/* Filters */}
-                        <div>
-                            <h3 className="text-[11px] font-bold tracking-[0.3em] text-slate-500 mb-6 uppercase">Movement</h3>
-                            <div className="grid grid-cols-2 gap-2">
-                                {['Automatic', 'Tourbillon', 'Manual', 'Quartz'].map(m => (
-                                    <button key={m} className={`px-3 py-2 text-[10px] border rounded-md uppercase transition-colors ${m === 'Tourbillon' ? 'border-primary bg-primary/10 text-primary' : 'border-slate-700 hover:border-primary'}`}>
-                                        {m}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="pt-6 border-t border-slate-800/50">
-                            <button className="w-full py-4 bg-primary/10 text-primary border border-primary/20 text-xs font-bold tracking-widest hover:bg-primary hover:text-black transition-all rounded-md">
-                                RESET FILTERS
-                            </button>
-                        </div>
-                    </div>
+                    <FilterContent />
                 </aside>
+
+                {/* Mobile Filter Drawer */}
+                <AnimatePresence>
+                    {isFiltersOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, x: '-100%' }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: '-100%' }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                            className="fixed inset-0 z-50 bg-background-dark/95 backdrop-blur-xl p-6 lg:hidden"
+                        >
+                            <div className="flex justify-between items-center mb-8">
+                                <h2 className="text-xl font-serif">Filters</h2>
+                                <button onClick={toggleFilters} className="text-white hover:text-primary">
+                                    <X className="w-6 h-6" />
+                                </button>
+                            </div>
+                            <FilterContent />
+                            <button onClick={toggleFilters} className="w-full mt-8 py-4 bg-primary text-black font-bold uppercase tracking-widest rounded-md">
+                                Show Results
+                            </button>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
 
                 {/* Product Grid */}
                 <section className="flex-1">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4 collection-header">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4 collection-header">
                         <div>
-                            <h1 className="text-4xl font-bold tracking-tight mb-2 uppercase">Horizon Series</h1>
+                            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2 uppercase">Horizon Series</h1>
                             <p className="text-slate-500 text-sm">24 Timeless pieces curated for the modern explorer.</p>
                         </div>
+
+                        {/* Mobile Filter Button */}
+                        <button onClick={toggleFilters} className="lg:hidden flex items-center gap-2 px-4 py-2 border border-primary/30 rounded-md text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-black transition-all">
+                            <Filter className="w-4 h-4" />
+                            Filters
+                        </button>
                     </div>
 
                     <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

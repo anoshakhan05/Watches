@@ -18,10 +18,10 @@ const Lookbook = () => {
         <div className="bg-[#f8f8f5] dark:bg-[#0a0a08] text-stone-800 dark:text-stone-200 font-display min-h-screen">
             <Navbar />
 
-            <main className="pt-32 pb-20 px-4 md:px-8 max-w-[1800px] mx-auto">
-                <div className="text-center mb-24 max-w-2xl mx-auto animate-fadeIn">
-                    <h1 className="text-5xl md:text-7xl font-light mb-6 font-serif italic">Lookbook</h1>
-                    <p className="text-stone-400 text-lg font-light leading-relaxed">
+            <main className="pt-24 md:pt-32 pb-20 px-4 md:px-8 max-w-[1800px] mx-auto">
+                <div className="text-center mb-16 md:mb-24 max-w-2xl mx-auto animate-fadeIn">
+                    <h1 className="text-4xl md:text-7xl font-light mb-4 md:mb-6 font-serif italic">Lookbook</h1>
+                    <p className="text-stone-400 text-sm md:text-lg font-light leading-relaxed px-4">
                         A visual journey through our latest campaign. Where timeless design meets modern living.
                     </p>
                 </div>

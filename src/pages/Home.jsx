@@ -72,7 +72,7 @@ const Home = () => {
                 </div>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden z-10">
-                    <h2 className="font-serif text-[12vw] leading-none text-white/[0.03] italic translate-y-[-10%] whitespace-nowrap">
+                    <h2 className="font-serif text-[15vw] md:text-[12vw] leading-none text-white/[0.03] italic translate-y-[-10%] whitespace-nowrap">
                         HOROLOGICAL EXCELLENCE
                     </h2>
                 </div>
@@ -82,21 +82,21 @@ const Home = () => {
                         <img
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDojfs4qyp5DxeFyojL5e4pQqukyF1HOLsDv_vWDUJUitQP_ujqpXa4bgiAPQKd_vKuwu1-aG-mKNZqCwMnN7wbS6J4kakyjwWrsLdn9qkOJg184ZlrQXOURAX2B9q36EqV7yS14QBi6tnqbPChoYuu-8g4pMm6u8UciUwAMcR3ba3lCyKPcSjaZ8ZBUp_BiZ1Q3qkxEG6XYtXIsz2E7CsRnxt-hhYdFLQEIgiCrqJsoE4lQN-cBr9pXqsa7XNDyvz2W4JeRBH9Q-vG"
                             alt="Luxury skeleton watch"
-                            className="w-[300px] md:w-[450px] h-auto object-contain drop-shadow-[0_35px_35px_rgba(242,204,13,0.15)]"
+                            className="w-[280px] sm:w-[350px] md:w-[450px] h-auto object-contain drop-shadow-[0_35px_35px_rgba(242,204,13,0.15)]"
                         />
                     </div>
 
-                    <div ref={textRef} className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center">
-                        <h1 className="font-serif text-6xl md:text-8xl tracking-tight text-primary text-glow leading-none mb-4">
+                    <div ref={textRef} className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center px-4">
+                        <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl tracking-tight text-primary text-glow leading-none mb-4">
                             TIMELESS PRECISION
                         </h1>
-                        <p className="font-display text-lg md:text-2xl tracking-[0.5em] text-white/80 font-light uppercase">
+                        <p className="font-display text-sm sm:text-lg md:text-2xl tracking-[0.3em] md:tracking-[0.5em] text-white/80 font-light uppercase">
                             REDEFINED
                         </p>
-                        <div className="mt-12">
-                            <button className="group relative px-10 py-4 overflow-hidden rounded-full border border-primary bg-transparent text-primary hover:text-black transition-colors duration-500">
+                        <div className="mt-8 md:mt-12">
+                            <button className="group relative px-8 py-3 md:px-10 md:py-4 overflow-hidden rounded-full border border-primary bg-transparent text-primary hover:text-black transition-colors duration-500">
                                 <span className="absolute inset-0 w-0 bg-primary transition-all duration-500 ease-out group-hover:w-full"></span>
-                                <span className="relative z-10 font-bold uppercase tracking-widest text-xs">Explore the Collection</span>
+                                <span className="relative z-10 font-bold uppercase tracking-widest text-[10px] md:text-xs">Explore the Collection</span>
                             </button>
                         </div>
                     </div>
@@ -104,12 +104,12 @@ const Home = () => {
 
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20">
                     <span className="text-[10px] uppercase tracking-[0.3em] text-primary/60 font-medium">Scroll to Discover</span>
-                    <div className="w-[1px] h-16 bg-gradient-to-b from-primary/60 via-primary/20 to-transparent"></div>
+                    <div className="w-[1px] h-12 md:h-16 bg-gradient-to-b from-primary/60 via-primary/20 to-transparent"></div>
                 </div>
             </section>
 
             {/* Voices of Excellence Section */}
-            <section ref={scrollTriggerRef} className="relative py-32 bg-background-dark overflow-hidden border-t border-white/5">
+            <section ref={scrollTriggerRef} className="relative py-20 md:py-32 bg-background-dark overflow-hidden border-t border-white/5">
                 <div className="absolute inset-0 z-0 flex items-center justify-center opacity-30">
                     <img
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDznmx4ZiKix4olWjyo-DsT3JGuwANsDz0hJcfC8595RY9tSJ3hgD2FnPg1m_d9E57R0odBhVGeP-oyZeUH2R6zFZG_0ujtttdLWuzBQkI-f5DPLsn0ly3gCc7MtPGDCCzUumHIi3YnvnCPll-brERPo0gRcvRzCUqGzl3Nrw__Iu7s2VR38c5vu1ZJV4e-Vdcz-B2pjlgE0CYgmjJP4JNowWOF-4SodphyP6gEHwK-nlB3v68qUBxcRCtxKUeqZ_bD3vcPrC1EgzPX"
